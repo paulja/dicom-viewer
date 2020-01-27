@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DICOM</title>
+<style>
+    .imageLayer {
+        display: block;
+        margin: 0 auto;
+        background: blue;
+        width: 100%;
+    }
+</style>
+<meta charset="UTF-8">
+<!-- dwv -->
+<script type="text/javascript" src="https://github.com/ivmartel/dwv/releases/download/v0.23.4/dwv-0.23.4.min.js"></script>
+<!-- Launch the app -->
+<script>
+document.addEventListener("DOMContentLoaded", function (/*event*/) {
+    // base function to get elements
+    dwv.gui.getElement = dwv.gui.base.getElement;
+    dwv.gui.displayProgress = function (percent) {};
+
+    // create the dwv app
+    var app = new dwv.App();
+    // initialise with the id of the container div
+    app.init({
+        "containerDivId": "dwv",
+        "tools": ["$MODE$"]
+    });
+    // load dicom data
+    app.loadURLs([$URLS$]);
+    app.addEventListener("load-end", function () {
+         console.log("DWV loaded");
+    });
+});
+</script>
+</head>
+
+<body>
+
+<!-- Main container div -->
+<div id="dwv">
+    <div class="layerContainer">
+        <canvas class="imageLayer"></canvas>
+    </div>
+</div>
+
+</body>
+</html>

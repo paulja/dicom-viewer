@@ -1,0 +1,28 @@
+{
+    "name": "DICOM Samples",
+    "files": [
+        {
+            "name": "Single image sample",
+            "files": [
+                "https://cm-file-cache.s3-eu-west-1.amazonaws.com/dicom/101.dcm"
+            ]
+        },
+        {
+            "name": "Sample with frames",
+            "files": [
+                "https://cm-file-cache.s3-eu-west-1.amazonaws.com/dicom/100.dcm"
+            ]
+        },
+        {
+            "name": "Slice sample",
+            "files": [
+                "https://cm-file-cache.s3-eu-west-1.amazonaws.com/dicom/102.dcm",
+                "https://cm-file-cache.s3-eu-west-1.amazonaws.com/dicom/103.dcm",
+                "https://cm-file-cache.s3-eu-west-1.amazonaws.com/dicom/104.dcm",
+                "https://cm-file-cache.s3-eu-west-1.amazonaws.com/dicom/105.dcm",
+                "https://cm-file-cache.s3-eu-west-1.amazonaws.com/dicom/106.dcm",
+                "https://cm-file-cache.s3-eu-west-1.amazonaws.com/dicom/107.dcm"
+            ]
+        }
+    ]
+}
